@@ -6,10 +6,9 @@ const app = express();
 
 app.use(express.static("static"));
 
-
 app.get("/", controller.getOverview);
 
-const port = 8000 || process.env.PORT;
+const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
 });
