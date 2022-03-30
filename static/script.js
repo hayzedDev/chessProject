@@ -1,10 +1,4 @@
-// import * as checkPossibility from "./checkPossibility";
-// import {
-//   checkLeft,
-//   checkRight,
-//   checkButtom,
-//   checkTop,
-// } from "./checkPossibility";
+
 
 function checkKnightPosition(position) {
   const chessArray = [];
