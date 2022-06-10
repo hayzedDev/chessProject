@@ -1,5 +1,3 @@
-
-
 function checkKnightPosition(position) {
   const chessArray = [];
   const interfaceArr = [];
@@ -23,7 +21,7 @@ function checkKnightPosition(position) {
 
   const knightObject = chessArray.find((cur) => cur.number === position);
 
-  const  checkLeft = (knightObject)=> {
+  const checkLeft = (knightObject) => {
     const leftPossibleTop = chessArray.find(
       (cur) =>
         cur.columnPosition === knightObject.columnPosition - 2 &&
@@ -34,11 +32,11 @@ function checkKnightPosition(position) {
         cur.columnPosition === knightObject.columnPosition - 2 &&
         cur.rowPosition === knightObject.rowPosition + 1
     );
-  
+
     return [leftPossibleBottom, leftPossibleTop];
-  }
-  
-  const  checkRight = (knightObject)=> {
+  };
+
+  const checkRight = (knightObject) => {
     const rightPossibleTop = chessArray.find(
       (cur) =>
         cur.columnPosition === knightObject.columnPosition + 2 &&
@@ -49,11 +47,11 @@ function checkKnightPosition(position) {
         cur.columnPosition === knightObject.columnPosition + 2 &&
         cur.rowPosition === knightObject.rowPosition + 1
     );
-  
+
     return [rightPossibleBottom, rightPossibleTop];
-  }
-  
-  const   checkButtom = (knightObject)=> {
+  };
+
+  const checkButtom = (knightObject) => {
     const bottomPossibleLeft = chessArray.find(
       (cur) =>
         cur.columnPosition === knightObject.columnPosition - 1 &&
@@ -64,11 +62,11 @@ function checkKnightPosition(position) {
         cur.columnPosition === knightObject.columnPosition + 1 &&
         cur.rowPosition === knightObject.rowPosition + 2
     );
-  
+
     return [bottomPossibleRight, bottomPossibleLeft];
-  }
-  
- const checkTop = (knightObject)=> {
+  };
+
+  const checkTop = (knightObject) => {
     const topPossibleLeft = chessArray.find(
       (cur) =>
         cur.columnPosition === knightObject.columnPosition - 1 &&
@@ -79,10 +77,9 @@ function checkKnightPosition(position) {
         cur.columnPosition === knightObject.columnPosition + 1 &&
         cur.rowPosition === knightObject.rowPosition - 2
     );
-  
+
     return [topPossibleRight, topPossibleLeft];
-  }
-  
+  };
 
   [
     ...checkLeft(knightObject),
