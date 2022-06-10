@@ -1,1 +1,1 @@
-link to project: https://chess-project-hayzeddev.herokuapp.com/
+link to project: https://chess-project-hayzeddev.netlify.app/
